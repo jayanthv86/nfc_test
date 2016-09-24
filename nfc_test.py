@@ -5,6 +5,9 @@ import sys
 
 def on_connect(tag):
     print(tag)
+    if tag.ndef:
+        print(tag.ndef.message.pretty())
+    time.sleep(5)
     return True
 
 rdwr_options = {
